@@ -46,7 +46,7 @@ public class ProgrammaEventi
     {
         eventi.Clear();
     }
-    public string EventiFuturi()
+    public string ListaProgrammaEventi()
     {
         var riga = Environment.NewLine;
         var eventiFuturi = "Eventi previsti: " + riga;

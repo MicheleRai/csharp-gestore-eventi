@@ -112,7 +112,7 @@ void gestoreEventi()
         }
     }
     Console.WriteLine($"Nella lista {programmazione.Titolo} da te creata sono presenti {programmazione.NumeroEventi()} eventi");
-    Console.WriteLine(programmazione.EventiFuturi());
+    Console.WriteLine(programmazione.ListaProgrammaEventi());
     while (true)
     {
         Console.WriteLine("Inserisci una data da cercare: ( gg/MM/yyyy )");

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Conferenza : Evento
 {
-    string? relatore;
+    readonly string? relatore;
     double prezzo;
     public Conferenza(string titolo, string data, int capienzaMassima, string relatore, double prezzo) : base(titolo, data, capienzaMassima)
     {
