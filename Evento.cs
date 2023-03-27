@@ -7,21 +7,25 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class Evento
 {
-    string titolo;
+    string? titolo;
     DateOnly data;
     int capienzaMassima;
     int postiPrenotati;
-    public Evento(string titolo, DateOnly data, int capienzaMassima, int postiPrenotati)
+    public Evento(string titolo, string data, int capienzaMassima)
     {
         Titolo = titolo;
-        Data = data;
+        Data = DateOnly.ParseExact(data, "dd/MM/yyyy", null);
         CapienzaMassima = capienzaMassima;
         PostiPrenotati = 0;
     }
 
-    public string Titolo
+    public string? Titolo
     {
-        get => titolo;
+        get
+        {
+            return titolo;
+        }
+
         set
         {
             if (!string.IsNullOrEmpty(value))
