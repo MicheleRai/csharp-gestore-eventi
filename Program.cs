@@ -25,8 +25,8 @@ void gestoreEventi()
     }
     Console.WriteLine($"I posti disponibili per l'evento {evento.Titolo} sono: {evento.CapienzaMassima - evento.PostiPrenotati}.");
     Console.WriteLine($"Sono stati prenotati: {evento.PostiPrenotati} posti su: {evento.CapienzaMassima}.");
-    var disdizione = true;
-    while (disdizione)
+    var disdetta = true;
+    while (disdetta)
     {
         Console.WriteLine("Vuoi disdire dei posti? ( y / N )");
         var input2 = Console.ReadLine();
@@ -38,7 +38,7 @@ void gestoreEventi()
             Console.WriteLine($"Il numero di posti prenotati è: {evento.PostiPrenotati}.");
             Console.WriteLine($"I posti restanti sono: {evento.CapienzaMassima - evento.PostiPrenotati} disponibili.");
         }
-        else disdizione = false;
+        else disdetta = false;
     }
     evento.ToString();
     Console.WriteLine($"Il numero di posti prenotati è: {evento.PostiPrenotati}.");
